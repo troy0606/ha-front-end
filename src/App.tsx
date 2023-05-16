@@ -8,7 +8,7 @@ import Footer from './layout/footer'
 export default function App () {
   return (
     <div className="App">
-      <Header/>
+      <Header backgroundColor='blue'/>
       <Outlet />
       <Footer/>
     </div>

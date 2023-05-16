@@ -6,11 +6,15 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
+interface props {
+  backgroundColor: string,
+  label?: string
+}
 
-export default function index () {
+export default function index ({backgroundColor, label}: props) {
   return (
     <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } , header: {backgroundColor}}} />
       <CssBaseline />
       <AppBar
         position="static"
