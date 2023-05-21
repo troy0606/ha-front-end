@@ -1,60 +1,37 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import GlobalStyles from '@mui/material/GlobalStyles';
 
 interface props {
   backgroundColor: string,
   label?: string
 }
 
-export default function index ({backgroundColor, label}: props) {
+const Header = ({backgroundColor, label}: props) => {
   return (
-    <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } , header: {backgroundColor}}} />
-      <CssBaseline />
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
-      >
-        <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-          Hero.com
-          </Typography>
-          <nav>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Features
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Enterprise
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-              Support
-            </Link>
-          </nav>
-        </Toolbar>
-      </AppBar>
-      {/* End footer */}
-    </React.Fragment>
+    <header className="bg-gray-800 py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white font-bold text-xl">My Website</div>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="/" className="text-gray-300 hover:text-white">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="text-gray-300 hover:text-white">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="text-gray-300 hover:text-white">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
-}
+};
+
+export default Header;

@@ -1,8 +1,25 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React from "react";
+import styles from "./index.module.scss";
 
-export default function index() {
+import {TAbilitys} from '../model';
+import Ability from './components/Ability'
+
+interface IProps {};
+
+const index = ({}: IProps) => {
   return (
-    <div>index</div>
-  )
-}
+    <React.Fragment>
+      {/* <div className="p-4">
+      <div className="space-y-4">
+      {(abilities as TAbilitys).map((ability) => (
+        <>
+          <Ability/>
+        </>
+      ))}
+      </div>
+      </div> */}
+    </React.Fragment>
+  );
+};
+
+export default index;

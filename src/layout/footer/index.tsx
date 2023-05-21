@@ -1,63 +1,12 @@
-import React from "react";
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-
-export default function index() {
-  const footers = [
-    {
-      title: 'Company',
-      description: ['Team', 'History'],
-    },
-    {
-      title: 'Features',
-      description: [
-        'Cool stuff',
-        'Random feature',
-      ],
-    },
-    {
-      title: 'Resources',
-      description: ['Resource', 'Resource name'],
-    },
-    {
-      title: 'Legal',
-      description: ['Privacy policy', 'Terms of use'],
-    },
-  ];
+const Footer = () => {
   return (
-    <>
-      {" "}
-      {/* Footer */}
-      <Container
-        maxWidth="md"
-        component="footer"
-        sx={{
-          borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-          mt: 8,
-          py: [3, 6],
-        }}
-      >
-        <Grid container spacing={4} justifyContent="space-evenly">
-          {footers.map((footer) => (
-            <Grid item xs={6} sm={3} key={footer.title}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
-                {footer.title}
-              </Typography>
-              <ul>
-                {footer.description.map((item) => (
-                  <li key={item}>
-                    <Link href="#" variant="subtitle1" color="text.secondary">
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </>
+    <footer className="bg-gray-800 py-4">
+      <div className="container mx-auto mt-4 border-t border-gray-600 pt-4 flex justify-between items-center">
+        <div className="text-gray-400 text-sm">&copy; 2023 My Website. All rights reserved.</div>
+        <div className="text-gray-400 text-sm">Designed by Benson</div>
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;

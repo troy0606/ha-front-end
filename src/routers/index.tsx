@@ -10,7 +10,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'heroes',
-        element: <List/>
+        element: <List/>,
+        children: [
+          {
+            path: ':id',
+            element: <Pofile/>
+          }
+        ]
       }
     ]
   }
