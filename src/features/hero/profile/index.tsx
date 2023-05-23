@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 import {TAbilitys} from '../model';
 import Ability from './components/Ability'
 
-interface IProps {};
+interface IProps extends TAbilitys{};
 
 const index = ({}: IProps) => {
   return (

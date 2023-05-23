@@ -4,16 +4,21 @@ export interface IHeroData {
   image: string;
 }
 
-interface IAbility {
-  name: [keyof typeof ABILITY];
+export interface IAbility {
+  name: TABILITY[keyof TABILITY];
   value: number;
 }
 
-enum ABILITY {
-  STR = 'str',
-  INT = 'int',
-  AGI = 'agi',
-  LUK = 'luk',
+type TABILITY = {
+  STR: 'str';
+  INT: 'int';
+  AGI: 'agi';
+  LUK: 'luk';
 }
+
+export type TAbilityApi = {
+  [k in TABILITY[keyof TABILITY]]: number;
+};
+
 
 export type TAbilitys = Array<IAbility>;
