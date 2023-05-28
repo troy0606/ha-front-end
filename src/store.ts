@@ -1,11 +1,15 @@
-import  heroListSliceReducer  from './features/hero/list/slice';
+import  heroApi  from '@hero_feature/query';
+import  heroListSliceReducer  from './features/hero/slice';
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector, useDispatch} from 'react-redux';
 
 const store = configureStore({
   reducer: {
-    heroList: heroListSliceReducer
-  }
+    heroList: heroListSliceReducer,
+    [heroApi.reducerPath]: heroApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(heroApi.middleware),
 });
 
 export default store;

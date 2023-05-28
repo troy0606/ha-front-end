@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { IHeroData } from "../../model";
-import * as heroApi from '../../api'
+import { IHeroData } from "./model";
+import * as heroApi from './api';
 
 export type THeroListData = Array<IHeroData>;
 

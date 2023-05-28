@@ -5,20 +5,14 @@ export interface IHeroData {
 }
 
 export interface IAbility {
-  name: TABILITY[keyof TABILITY];
+  name: TAbility;
   value: number;
 }
 
-type TABILITY = {
-  STR: 'str';
-  INT: 'int';
-  AGI: 'agi';
-  LUK: 'luk';
-}
+export type TAbility = 'str' | 'int' | 'agi' | 'luk';
 
 export type TAbilityApi = {
-  [k in TABILITY[keyof TABILITY]]: number;
+  [k in TAbility]: number;
 };
-
 
 export type TAbilitys = Array<IAbility>;

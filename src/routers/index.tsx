@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
-import Pofile from '../features/hero/profile';
-import List from '../features/hero/list';
+import {List, Profile} from '@hero_feature/pages';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +13,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: ':id',
-            element: <Pofile/>
+            element: <Profile/>
           }
         ]
       }
