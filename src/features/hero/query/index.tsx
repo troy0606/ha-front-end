@@ -19,11 +19,12 @@ export default createApi({
       query: (heroId) => `/${heroId}/profile`,
       providesTags: ['getPofile'],
     }),
-    patchProfile: builder.mutation<number, { heroId: string; post: TAbilityApi}>({
-      query: ( {heroId,post}) => ({
+    patchProfile: builder.mutation<number, { heroId: string; abilities: TAbilityApi}>({
+      query: ( {heroId,abilities}) => ({
         url: `/${heroId}/profile`,
         method: 'PATCH',
-        post,
+        body: abilities,
+        responseHandler: (response) => response.text(),
       }),
     })
   })

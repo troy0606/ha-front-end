@@ -87,6 +87,9 @@ devDependencies:
   babel-plugin-named-exports-order:
     specifier: ^0.0.2
     version: 0.0.2
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   eslint-plugin-storybook:
     specifier: ^0.6.12
     version: 0.6.12(eslint@8.40.0)(typescript@4.9.5)
@@ -5018,6 +5021,11 @@ packages:
       is-plain-object: 2.0.4
       kind-of: 6.0.3
       shallow-clone: 3.0.1
+    dev: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /co@4.6.0:
