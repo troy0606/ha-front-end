@@ -1,17 +1,17 @@
 import store from "./store";
 import { Provider } from "react-redux";
-import "./App.css";
+import "./App.scss";
 import { Outlet } from "react-router-dom";
-import Header from "./layout/header";
-import Footer from "./layout/footer";
+import HeroLayout from "./layout/hero";
+
 
 export default function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Header backgroundColor="blue" />
-        <Outlet />
-        <Footer />
+        <HeroLayout>
+          <Outlet />
+        </HeroLayout>
       </div>
     </Provider>
   );

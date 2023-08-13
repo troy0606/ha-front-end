@@ -95,7 +95,7 @@ const Profile = ({}: IProps) => {
       <div className="container">
         {profileUpdatingError && (
           <div>
-            <span>Error: {profileUpdatingError}</span>
+            <span>Error: {JSON.stringify(profileUpdatingError)}</span>
           </div>
         )}
         {profileUpdatingData && (

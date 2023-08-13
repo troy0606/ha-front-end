@@ -21,7 +21,10 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
-      "@hero_feature/*": ["./features/hero/*"]
+      "@hero_feature/*": ["./features/hero/*"],
+      "@fp_feature/*": ["./features/fp/*"],
+      "@md_path/*": ["./assets/md/*"],
+      "@utils_style/*": ["./utils/styles/*"],
     }
   },
   "include": [

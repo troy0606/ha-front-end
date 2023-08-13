@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
 import {List, Profile} from '@hero_feature/pages';
+import {Practice1} from '@fp_feature/pages';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             element: <Profile/>
           }
         ]
+      },
+      {
+        path: 'fp',
+        element: <Practice1/>,
       }
     ]
   }

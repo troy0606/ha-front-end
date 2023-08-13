@@ -5,7 +5,7 @@ interface props {
   label?: string
 }
 
-const Header = ({backgroundColor, label}: props) => {
+const Header = () => {
   return (
     <header className="bg-gray-800 py-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -18,13 +18,13 @@ const Header = ({backgroundColor, label}: props) => {
               </a>
             </li>
             <li>
-              <a href="/about" className="text-gray-300 hover:text-white">
-                About
+              <a href="/heroes" className="text-gray-300 hover:text-white">
+                Heroes
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-gray-300 hover:text-white">
-                Contact
+              <a href="/fp" className="text-gray-300 hover:text-white">
+                FP
               </a>
             </li>
           </ul>
