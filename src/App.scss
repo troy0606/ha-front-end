@@ -1,2 +1,14 @@
 @import './tailwindcss/index.css';
-@import '@utils_style/markdown.scss'
+@import '@utils_style/markdown.scss';
+
+/**
+  針對全域樣式的調整
+  或是引用外部樣式，但不想直接改變原始碼可以放這裡管理
+**/
+.reactMarkDown {
+  ol {
+    li {
+      list-style-type: decimal;
+    }
+  }
+}
